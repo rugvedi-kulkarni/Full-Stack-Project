@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./db");
-const appointmentRoutes = require("./routes/appointmentRoutes");
+const appointmentRoutes = require("../routes/appointmentRoutes");
 
 const app = express();
 
