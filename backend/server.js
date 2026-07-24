@@ -12,7 +12,7 @@ app.use(express.static(__dirname));
 
 // This tells Render: "When someone visits the home link, send them my HTML file"
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'project_2.html')); 
+    res.sendFile(path.join(__dirname, 'index.html')); 
 });
 
 // 1. UPDATE: Use Render's port if available, otherwise use 3000 for local testing

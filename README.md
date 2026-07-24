@@ -25,3 +25,4 @@ Real-time Data Storage: Appointments are instantly saved to a MongoDB cluster.
 Responsive Design: Fully functional on desktops, tablets, and mobile phones.
 
 RESTful API: A structured backend that handles POST requests to create new appointments and GET requests to retrieve them.
+

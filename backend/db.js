@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require('dotenv').config(); // loads .env variables
 
 // This line is the magic fix:
 // It looks for the Render variable first; if it's not there, it uses your local one.
