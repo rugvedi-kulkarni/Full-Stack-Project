@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./db");
-const appointmentRoutes = require("../routes/appointmentRoutes");
+const appointmentRoutes = require("../backend/routes/appointmentRoutes");
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 // 1. UPDATE: Use Render's port if available, otherwise use 3000 for local testing
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 27017;
 
 connectDB();
 
