@@ -5,13 +5,13 @@ A robust Full-Stack Web Application designed to streamline the process of schedu
 This system allows users to book medical appointments online by filling out a digital form. The data is processed through a secure backend API and stored in a cloud database, replacing traditional manual record-keeping with an automated, digital solution.
 
 🛠️ Tech Stack
-Frontend: HTML5, CSS3, JavaScript (ES6+)
+Frontend: HTML5, CSS3, JavaScript
 
 Backend: Node.js, Express.js
 
-Database: MongoDB (via Mongoose ODM)
+Database: MongoDB (via Mongoose)
 
-API Testing: Postman / Logic testing
+API Testing: 
 
 Tools: Cursor AI, Git, GitHub
 
@@ -26,3 +26,4 @@ Responsive Design: Fully functional on desktops, tablets, and mobile phones.
 
 RESTful API: A structured backend that handles POST requests to create new appointments and GET requests to retrieve them.
 
+Deployment Link: https://dtil-college-project-3.onrender.com/
