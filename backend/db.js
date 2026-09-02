@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
-require('dotenv').config(); // loads .env variables
+require("dotenv").config(); // loads .env variables
 
 // This line is the magic fix:
 // It looks for the Render variable first; if it's not there, it uses your local one.
-const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/hospital_db";
+const MONGO_URI =
+  process.env.MONGO_URI || "mongodb://localhost:127.0.0.1/hospital_db";
 
 async function connectDB() {
   try {
