@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./db");
@@ -12,11 +14,11 @@ app.use(express.static(__dirname));
 
 // This tells Render: "When someone visits the home link, send them my HTML file"
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "server.js"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // 1. UPDATE: Use Render's port if available, otherwise use 3000 for local testing
-const PORT = process.env.PORT || 27017;
+const PORT = process.env.PORT || 3000;
 
 connectDB();
 
@@ -27,6 +29,6 @@ app.use(express.static(__dirname));
 app.use("/api", appointmentRoutes);
 
 // 2. UPDATE: Listen on '0.0.0.0' so Render can access the server
-app.listen(PORT, "127.0.0.1", () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });

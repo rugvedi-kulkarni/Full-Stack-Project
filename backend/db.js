@@ -1,19 +1,17 @@
+const dns = require("dns");
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
 const mongoose = require("mongoose");
-require("dotenv").config(); // loads .env variables
 
-// This line is the magic fix:
-// It looks for the Render variable first; if it's not there, it uses your local one.
-const MONGO_URI =
-  process.env.MONGO_URI || "mongodb://localhost:127.0.0.1/hospital_db";
-
-async function connectDB() {
+const connectDB = async () => {
   try {
-    await mongoose.connect(MONGO_URI);
-    console.log("MongoDB connected successfully!");
+    await mongoose.connect(process.env.MONGO_URI);
+
+    console.log("MongoDB Connected Successfully");
   } catch (error) {
-    console.error("MongoDB connection failed:", error.message);
+    console.error("MongoDB Connection Failed:", error.message);
     process.exit(1);
   }
-}
+};
 
 module.exports = connectDB;
